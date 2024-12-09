@@ -1,0 +1,657 @@
+/* Updated CSS */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Avoid horizontal scrolling */
+}
+
+.navbar {
+  background: #265073;
+  font-family: Calibri, sans-serif;
+  padding: 0 5%;
+  height: 60px;
+}
+
+.navdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo a {
+  font-size: 16px;
+  font-weight: 500;
+  color: lightgrey;
+  text-transform: uppercase;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Consistent spacing between items */
+  list-style: none;
+}
+
+.nav-menu li a {
+  font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: hsla(195, 13%, 94%, 0.963);
+  text-decoration: none;
+}
+
+button {
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 5px 20px;
+  width: fit-content;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #0000ff;
+  cursor: pointer;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+select.product {
+  background-color: #265073;
+  color: hsla(195, 13%, 94%, 0.963);
+  border: none;
+  padding: 5px;
+  font-size: 13px;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Navbar Design */
+@media screen and (max-width: 768px) {
+  .navdiv {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #265073;
+    padding: 10px 5%;
+    border-radius: 8px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    color: hsla(195, 13%, 94%, 0.963);
+    background: #265073;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    top: -37px;
+    right: -127px;
+    color: #ffa500;
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .logo {
+    position: relative;
+    bottom: -7px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Products */
+.products {
+  background-color: #ebf4fa;
+  padding: 30px 5%;
+  text-align: center;
+  color: black;
+}
+
+.products .pause {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.products p {
+  margin-bottom: 20px;
+}
+
+.products b {
+  color: #265073;
+  font-size: xx-large;
+}
+
+.products h3 {
+  color: #265073;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.products button {
+  display: inline-flex;
+  margin: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .products button {
+    width: 100%; /* Full width on mobile */
+    margin: 10px 0; /* Vertical spacing between buttons */
+  }
+}
+
+.products button:first-of-type {
+  background-color: tomato;
+  color: white;
+  width: 150px; /* Reduced width */
+  height: 40px; /* Reduced height */
+  border: none;
+  font-size: small; /* Smaller font size */
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px; /* Reduced width */
+  height: 40px; /* Reduced height */
+  background: linear-gradient(to right, #007bff 60%, crimson 40%);
+  border-radius: 20px; /* Adjusted for smaller size */
+  border: none;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px auto;
+}
+
+.button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.button span:first-child {
+  background: transparent;
+  margin-left: 10px; /* Adjusted for smaller button */
+  font-weight: 400;
+  font-size: small; /* Smaller font size */
+}
+
+.button span:last-child {
+  background: transparent;
+  text-align: center;
+}
+
+.button span:last-child .percent {
+  font-size: large; /* Reduced size */
+}
+
+.button span:last-child .text {
+  font-size: 12px; /* Reduced size */
+  font-weight: 400;
+}
+
+.download {
+  margin-bottom: 20px;
+}
+
+.download ul {
+  padding: 30px 10px;
+}
+
+.download li {
+  display: flex;
+  color: #265073;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px;
+  list-style-type: none;
+}
+
+/* Style the images */
+.download li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  object-fit: contain;
+}
+
+/* Adjust text position */
+ul.download li {
+  line-height: 1; /* Reduce line-height to tighten text placement */
+}
+
+ul.download li span {
+  position: relative;
+  top: -7px; /* Adjust text slightly upwards */
+}
+
+/* Circular container around icons */
+.icon-circle {
+  display: inline-flex; /* Center the image inside the circle */
+  justify-content: right;
+  align-items: center;
+  width: 30px; /* Width of the circle */
+  height: 30px; /* Height of the circle (same as width for a perfect circle) */
+  border-radius: 50%; /* Makes the container circular */
+  background-color: #f0f0f0; /* Background color of the circle */
+  border: 2px solid #ccc; /* Optional: Add a border */
+  overflow: hidden; /* Ensures the image fits inside the circle */
+}
+
+/* Style the image */
+.icon-circle img {
+  width: 60%; /* Adjust the size of the image inside the circle */
+  height: 60%; /* Ensure the image fits proportionally */
+  object-fit: content;
+}
+
+/* Details Section */
+.details {
+  background-color: white;
+  padding: 20px 5%;
+}
+
+.details ul {
+  list-style: none;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.details li {
+  display: inline;
+  align-items: center;
+
+  gap: 10px;
+  padding: 20px 10px;
+  font-size: 13px;
+  color: black;
+}
+
+/* .details li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  object-fit: contain;
+} */
+
+ul.details li {
+  line-height: 1;
+}
+
+ul.details li span {
+  position: relative;
+  top: -7px;
+}
+
+/* sprite image */
+
+.details li span {
+  display: inline-block;
+  width: 20px; /* width of one sprite image */
+  height: 20px; /* height of one sprite image */
+  background-image: url('HTML_CSS_TEST.png/product-icon-sprites.png');
+  background-size: 20px auto; /* Adjust as per the total sprite size */
+  vertical-align: middle;
+  margin-right: 10px; /* Add some spacing if needed */
+}
+
+.details li span.overview {
+  background-position: 0 0;
+}
+
+.details li span.features {
+  background-position: 0 -20px;
+}
+
+.details li span.how-it-works {
+  background-position: 0 -40px;
+}
+
+.details li span.user-manual {
+  background-position: 0 -60px;
+}
+
+.details li span.faq {
+  background-position: 0 -80px;
+}
+
+.details li span.videos {
+  background-position: 0 -100px;
+}
+
+.details li span.pricing {
+  background-position: 0 -120px;
+}
+
+.details li span.screenshots {
+  background-position: 0 -140px;
+}
+
+/* overview */
+
+.overview1 {
+  background: url(HTML_CSS_TEST.png/accelerate_img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 180px;
+  text-align: center;
+  color: #265073;
+  padding-top: 1%;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.overview2 {
+  background-color: #f8f8ff;
+  display: block;
+  justify-content: space-between;
+  text-align: justify;
+  padding: 30px 5%;
+  line-height: 2;
+}
+
+.overview2 h3 {
+  color: #265073;
+  font-size: 22px;
+}
+
+.overview2 h5 {
+  color: black;
+  font-size: 18px;
+}
+
+.overview2 p b {
+  color: #0000ff;
+}
+
+.overview2 .column {
+  float: left;
+  width: 48%;
+}
+
+.overview2 .column:last-child {
+  margin-right: 0;
+}
+
+.overview3 {
+  background: url(HTML_CSS_TEST.png/bg-how-does-office365-mailbox-work.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 320px;
+  color: #265073;
+  text-align: justify;
+  padding: 30px 5%;
+}
+
+.overview3 span {
+  position: relative;
+  top: -197px;
+}
+
+.overview3 h3 {
+  color: #265073;
+  font-size: 24px;
+  line-height: 3;
+}
+
+.overview3 ol li {
+  color: black;
+  list-style-type: decimal;
+  width: 500px;
+  padding: 10px;
+  font-size: small;
+  /* margin-left: -5px; */
+}
+
+.overview3 button {
+  border-radius: 20px;
+  border: transparent;
+  background-color: royalblue;
+  color: #fffffff5;
+  width: 125px;
+}
+
+/* Responsive Overview */
+@media (max-width: 768px) {
+  /* Overview 1: Adjust padding and font size */
+  .overview1 {
+    height: 150px;
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Overview 2: Stack the columns */
+  .overview2 .column {
+    width: 100%; /* Stack the columns on small screens */
+    margin-right: 0;
+  }
+
+  .overview2 h3 {
+    font-size: 20px; /* Smaller heading size */
+  }
+
+  .overview2 h5 {
+    font-size: 16px; /* Smaller heading size */
+  }
+
+  .overview2 p {
+    font-size: 14px; /* Smaller text for paragraphs */
+  }
+
+  /* Overview 3: Adjust button and text */
+  .overview3 h3 {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .overview3 ol li {
+    width: 100%; /* Full width for list items on small screens */
+    margin-left: 0;
+    padding: 8px;
+  }
+
+  .overview3 button {
+    width: 100%; /* Full width button on small screens */
+    margin-left: 0;
+  }
+}
+
+/* footer */
+
+footer {
+  background-color: #3d3c3a;
+  font-weight: 10px;
+  color: #c0c0c0;
+  padding: 20px 5%;
+}
+
+.footer ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+footer ul li {
+  display: block;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+footer li b {
+  color: #f8f8ff;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 3%;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  footer .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer ul {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 576px) {
+  .logo a {
+    font-size: 14px;
+  }
+
+  .products button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .overview3 h3,
+  .overview3 ol li {
+    font-size: 16px;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .products,
+  .details,
+  .footer {
+    padding: 20px 5%;
+  }
+
+  .products button,
+  .details li {
+    width: 100%;
+  }
+}
+
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+  width: 15%;
+}
+
+.row1::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.column1 {
+  float: left;
+  width: 33.33%;
+}
+
+/* General sprite settings */
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url('HTML_CSS_TEST.png/otherlinks-sprite.png');
+  background-size: 160px auto;
+  background-repeat: no-repeat;
+}
+
+.icon-cloud {
+  background-position: 0 0;
+}
+
+.icon-folder {
+  background-position: -32px 0;
+}
+
+.icon-microsoft {
+  background-position: -64px 0;
+}
+
+.icon-stack {
+  background-position: -96px 0;
+}
+
+.icon-files {
+  background-position: -128px 0;
+}
+
+.icon-office {
+  background-position: -160px 0;
+}
